@@ -1,24 +1,70 @@
+" --------------------------------------------------------------------
+" Vundle Configuration
+" --------------------------------------------------------------------
+
+filetype off                      " Required for Vundle
+set rtp+=~/.vim/bundle/Vundle.vim " Required for Vundle
+call vundle#begin()               " Required for Vundle
+
+Plugin 'gmarik/vundle.vim'        " Required for Vundle
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()                 " Required for Vundle
+filetype plugin on                " Required for Vundle
+
+" --------------------------------------------------------------------
+"  Standard vim config
+" --------------------------------------------------------------------
+
+" Check the first & last three lines of a file for a vim modeline - needed
+" to get correct behavior when looking at c++ standard library headers
+" that do not have an extension
 set modeline
 set modelines=3
+
+" An alternative way to look for modelines - the above is better, but this
+" might work better on ancient vim versions
+"au BufRead * if search('\V-*- C++ -*-', 'n', 5) | setlocal ft=cpp ts=8 sw=8 | endif
+
+" The normal stuff
+syntax on
 set nocompatible
 
-" set t_Co=1
-syntax on
+" These two together give the best search behavior, lowercase search patterns
+" match any case, if there's an uppercase letter in the pattern, it'll do
+" case sensitive searching
+set ignorecase
+set smartcase
 set showmatch
+
+" All tabs, all the time
 set ts=4
 set sw=4
 "set expandtab
 
-set ignorecase
-set smartcase
+" If you want to force vim syntax highlighting to only use bold and italic
+" attributes, uncomment this:
+" set t_Co=1
+"
 
+" Let a .exrc or .vimrc in the working directory override the global one
 set exrc
+
+" Set folding on indent demarkations, then expand them all
 set foldmethod=indent
 set foldnestmax=1
 set nofoldenable
 
+" Put a vertical rule at column 81
 set colorcolumn=81
 
+" --------------------------------------------------------------------
+" Tags file handling - iteratively search backward from the cwd to
+" the root directory, looking in each parent directory for a tags file;
+" this helps a lot on large projects with architecture-specific
+" directories... in the arch directory you're concerned with, vim will
+" prefer those local definitions over the global project's definitions
+" --------------------------------------------------------------------
 let mydir = getcwd()
 let &tags = ''
 if (filereadable(mydir . "/tags"))
@@ -47,11 +93,11 @@ while (mydir != '/')
 endwhile
 
 " echo "Tag Path = " . &tags
-" since c++ headers sometimes don't have a suffix
-au BufRead * if search('\V-*- C++ -*-', 'n', 5) | setlocal ft=cpp ts=8 sw=8 | endif
 
 
-
+" --------------------------------------------------------------------
+" Colors, you know, for kids!
+" --------------------------------------------------------------------
 hi Comment     term=bold      cterm=NONE      ctermfg=LightBlue
 hi Constant    term=underline cterm=NONE      ctermfg=DarkRed
 hi Special     term=bold      cterm=NONE      ctermfg=Yellow
@@ -68,11 +114,10 @@ hi FoldColumn term=reverse ctermfg=DarkCyan ctermbg=DarkGrey
 hi Error term=reverse cterm=NONE ctermfg=Red ctermbg=Yellow
 hi Todo  term=reverse cterm=NONE ctermfg=Red ctermbg=Yellow
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'Valloric/YouCompleteMe'
+" --------------------------------------------------------------------
+" YouCompleteMe Configuration - Commented out are the default values,
+" settings that needed changing are the only ones that are uncommented
+" --------------------------------------------------------------------
 
 " let g:ycm_min_num_of_chars_for_completion = 2
 " let g:ycm_min_num_identifier_candidate_chars = 0
@@ -161,5 +206,7 @@ let g:ycm_confirm_extra_conf = 0
 " let g:ycm_cache_omnifunc = 1
 " let g:ycm_use_ultisnips_completer = 1
 
+" A couple of extra function key bindings for those nasty compilation
+" problems that you can't solve w/o full compiler messages
 nnoremap <F2> :YcmDiags<CR>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>

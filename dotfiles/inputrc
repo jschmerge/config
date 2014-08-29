@@ -1,0 +1,14 @@
+#
+# Use system defaults
+#
+$include /etc/inputrc
+
+#
+# These bindings allow ctrl+left/right arrow to move words in rxvt
+# compatible terminals - on debian linux flavors, the default inputrc
+# only enables them if $TERM == rxvt, which means if you're setting your
+# term to something like xterm-color, they get missed
+#
+"\eOc": forward-word
+"\eOd": backward-word
+
