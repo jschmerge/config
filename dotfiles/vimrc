@@ -131,7 +131,9 @@ hi Todo  term=reverse cterm=NONE ctermfg=Red ctermbg=Yellow
 "      \ 'unite' : 1,
 "      \ 'text' : 1,
 "      \ 'vimwiki' : 1,
-"      \ 'pandoc' : 1
+"      \ 'pandoc' : 1,
+"      \ 'infolog' : 1,
+"      \ 'mail' : 1
 "      \}
 " let g:ycm_filetype_specific_completion_to_disable = {}
 " let g:ycm_show_diagnostics_ui = 1
