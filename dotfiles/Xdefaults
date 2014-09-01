@@ -1,0 +1,93 @@
+
+Aterm*transparent:			true
+Aterm*transpscrollbar:		true
+*shading:				30
+*colorBD:				PaleGoldenrod
+*colorUL:				tomato3
+
+! Aterm settings
+*colorULMode:			on
+*underLine:			off
+*colorBDMode:			on
+*highlightSelection:	true
+*scrollBar:			true
+*font:					fixed
+!Aterm*backspacekey:			
+
+Aterm*termName: xterm
+
+! Color settings - these should match the gnome-terminal defaults
+
+! low intensity
+*color0: #2E3436
+*color1: tomato3
+*color2: #8AE234
+*color3: PaleGoldenrod
+*color4: #729FCF
+*color5: #75507B
+*color6: #06989A
+*color7: #D3D7CF
+
+! high intensity
+*color8: #2E3436
+*color9: tomato3
+*color10: #8AE234
+*color11: PaleGoldenrod
+*color12: #729FCF
+*color13: #75507B
+*color14: #06989A
+*color15: #D3D7CF
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! xterm (and friends)
+
+XTerm*highlightSelection:		true
+! Uncomment this to use color for the bold attribute
+XTerm*VT100*colorBDMode:		on
+XTerm*VT100*colorBD:			PaleGoldenrod
+! Uncomment this to use color for underline attribute
+XTerm.VT100*colorULMode:		on
+XTerm.VT100*underLine:			off
+XTerm*VT100*colorUL:			#ffcc91
+! Uncomment this to display the scrollbar 
+XTerm*scrollBar:				true
+
+! This resource specifies whether or not to ignore the 'alternate screen'
+! of applications such as vi.  When it is on, these applications will restore
+! the contents of the screen when they are exited to what they were before
+! they were started.  When it is off, the contents of vi will remain on the
+! screen after the program is quit.
+XTerm.VT100.titeInhibit:		true
+
+! Uncomment this to turn off color mode in your xterms
+! XTerm.VT100*colorMode:  off
+!XTerm.VT100*dynamicColors:  on
+
+! Number of lines of scrollback to save
+XTerm*saveLines:	1500
+
+! XTerm*reverseWrap:	true
+
+*visualBell:		True
+*scrollTtyOutput:	False
+*scrollKey:		True
+*Scrollbar.JumpCursor:	True
+!*numeric:		POSIX
+!*displayLang:		POSIX
+!*basicLocale:		POSIX
+!*timeFormat:		POSIX
+!*inputLang:		POSIX
+
+!*printAttributes:	2
+
+! These defaults pulled from my /usr/lib/X11/app-defaults/NXTerm
+! I dont want to rely on the defaults when a define is specifically
+! set for BLACK_BG_XTERMS
+!*VT100*colorBD: 	white
+!XTerm*background:	#2E3436
+!XTerm*foreground:	white
+!XTerm*colorUL:		red
+!XTerm*SimpleMenu.background:	gray30
+!XTerm*SimpleMenu.foreground:	black
+
+*scrollstyle: rxvt

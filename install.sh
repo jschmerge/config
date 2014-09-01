@@ -20,12 +20,12 @@ do
 	then
 		echo "  Backing up current ${destination} to ${destination}.bak"
 		[ -e "${destination}.bak" ] && rm -vf "${destination}.bak"
-		mv -v ${destination} ${destination}.bak
+		mv ${destination} ${destination}.bak
 		skip=0
 	elif [ -L ${destination} ]
 	then
 		echo "  Removing symlink ${destination}"
-		rm -vf ${destination}
+		rm -f ${destination}
 		skip=0
 	elif [ -e ${destination} ]
 	then
@@ -38,7 +38,7 @@ do
 
 	if [ "$skip" != 1 ]
 	then
-		ln -sv ${file} ${destination}
+		ln -s ${file} ${destination}
 	fi
 
 done
