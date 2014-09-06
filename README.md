@@ -1,4 +1,5 @@
 config
 ======
 
-This is just a place where I dump some config files so i can pull them to random servers
+This is just a place where I dump some config files so I can have the same
+development environment on multiple computers.
