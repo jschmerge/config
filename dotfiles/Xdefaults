@@ -1,5 +1,5 @@
 
-Aterm*transparent:			true
+*transparent:			true
 Aterm*transpscrollbar:		true
 *shading:				30
 *colorBD:				PaleGoldenrod
@@ -14,7 +14,7 @@ Aterm*transpscrollbar:		true
 *font:					fixed
 !Aterm*backspacekey:			
 
-Aterm*termName: xterm
+*termName: xterm
 
 ! Color settings - these should match the gnome-terminal defaults
 
@@ -89,5 +89,3 @@ XTerm*saveLines:	1500
 !XTerm*colorUL:		red
 !XTerm*SimpleMenu.background:	gray30
 !XTerm*SimpleMenu.foreground:	black
-
-*scrollstyle: rxvt

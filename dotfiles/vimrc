@@ -24,7 +24,7 @@ set modelines=3
 
 " An alternative way to look for modelines - the above is better, but this
 " might work better on ancient vim versions
-"au BufRead * if search('\V-*- C++ -*-', 'n', 5) | setlocal ft=cpp ts=8 sw=8 | endif
+au BufRead * if search('\V-*- C++ -*-', 'n', 1) | setlocal ft=cpp ts=8 sw=8 | endif
 
 " The normal stuff
 syntax on
