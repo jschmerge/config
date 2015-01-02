@@ -94,19 +94,21 @@ endwhile
 
 " echo "Tag Path = " . &tags
 
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
 
 " --------------------------------------------------------------------
 " Colors, you know, for kids!
 " --------------------------------------------------------------------
-hi Comment     term=bold      cterm=NONE      ctermfg=LightBlue
-hi Constant    term=underline cterm=NONE      ctermfg=DarkRed
-hi Special     term=bold      cterm=NONE      ctermfg=Yellow
-hi Identifier  term=underline cterm=NONE      ctermfg=DarkCyan
-hi Statement   term=bold      cterm=NONE      ctermfg=Yellow
-hi PreProc     term=underline cterm=NONE      ctermfg=Magenta
-hi Type        term=underline cterm=NONE      ctermfg=DarkGreen
-hi Underlined  term=underline cterm=underline ctermfg=DarkMagenta
-hi Ignore      term=NONE      cterm=NONE      ctermfg=white
+hi Comment     term=bold      cterm=bold,italic ctermfg=LightBlue
+hi Constant    term=underline cterm=NONE        ctermfg=DarkRed
+hi Special     term=bold      cterm=NONE        ctermfg=Yellow
+hi Identifier  term=underline cterm=NONE        ctermfg=DarkCyan
+hi Statement   term=bold      cterm=NONE        ctermfg=Yellow
+hi PreProc     term=underline cterm=NONE        ctermfg=Magenta
+hi Type        term=underline cterm=NONE        ctermfg=DarkGreen
+hi Underlined  term=underline cterm=underline   ctermfg=DarkMagenta
+hi Ignore      term=NONE      cterm=NONE        ctermfg=white
 
 hi ColorColumn term=NONE     ctermbg=DarkGrey
 hi Folded term=reverse ctermfg=DarkCyan ctermbg=DarkGrey
