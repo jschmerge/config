@@ -1,7 +1,6 @@
 #!/bin/bash
 
-rootLocation=$(dirname $0)
-rootLocation=$(realpath $rootLocation)
+rootLocation=`pwd`
 
 echo "Base location = $rootLocation"
 
