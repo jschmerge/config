@@ -82,11 +82,27 @@ XTerm*saveLines:          1500
 ! These defaults pulled from my /usr/lib/X11/app-defaults/NXTerm
 ! I dont want to rely on the defaults when a define is specifically
 ! set for BLACK_BG_XTERMS
-!*VT100*colorBD:          white
-!XTerm*background:        #2E3436
-*foreground:        white
-!XTerm*colorUL:           red
-!XTerm*SimpleMenu.background: gray30
-!XTerm*SimpleMenu.foreground: black
+!*VT100*colorBD: 	white
+!XTerm*background:	#2E3436
+!XTerm*foreground:	white
+!XTerm*colorUL:		red
+!XTerm*SimpleMenu.background:	gray30
+!XTerm*SimpleMenu.foreground:	black
 
-*scrollstyle:             plain
+URxvt.scrollstyle: plain
+URxvt.foreground: white
+URxvt.scrollColor: #2E3436
+URxvt.cursorColor2: #000000
+
+!scrollBar_floating
+!scrollTtyOutput
+!scrollTtyKeypress.
+!scrollWithBuffer.
+
+URxvt.letterSpace: -1
+URxvt.font:xft:Monospace:style=Book:size=9
+URxvt.italicFont:xft:Monospace:style=Italic:size=9
+URxvt.boldFont:xft:Monospace:style=Bold:size=9
+!URxvt.italicFont:xft:DejaVu Sans Mono:style=Oblique:pixelsize=13
+!URxvt.boldItalicFont:xft:DejaVu Sans Mono:style=Bold Oblique:pixelsize=13
+
