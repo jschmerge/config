@@ -97,7 +97,7 @@ URxvt.cursorColor2: #000000
 
 !scrollBar_floating
 !scrollTtyOutput
-!scrollTtyKeypress.
+URxvt.scrollTtyKeypress: true
 !scrollWithBuffer.
 
 URxvt.internalBorder: 1
